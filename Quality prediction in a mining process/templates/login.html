@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Login Form</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lstyle.css') }}">
+<link rel="stylesheet" type="text/css" href="C:\Users\sarath\Internship\SBIP(QPMP)\static\css\lstyle.css">
+</head>
+<body>
+    <div class="loginbox">
+    <img src="https://f0.pngfuel.com/png/980/304/man-profile-illustration-computer-icons-user-profile-avatar-png-clip-art.png" class="avatar" alt="avtar">
+        <h1>Login Here</h1>
+        <form action="{{ url_for('login')}}"  method="post">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password"><br><br><br>
+            <input type="submit" name="login" value="Login">
+        </form>
+        <br>
+        <h1> {{info}} </h1>
+    </div>
+
+</body>
+</html>

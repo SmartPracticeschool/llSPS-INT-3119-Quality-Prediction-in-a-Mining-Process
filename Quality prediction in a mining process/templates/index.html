@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Project</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="C:\Users\sarath\Internship\SBIP(QPMP)\static\css\style.css">
+</head>
+<body>
+    <div class="login">
+    <center><h2>Welcome {{name}} !</h2>
+      <h1>Quality Prediction In Mining Process</h1>
+   <form action="{{ url_for('y_predict')}}"  method="post">
+   <input type="text" name="Iron_Feed" placeholder="Iron_feed" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="silica_feed" placeholder="Silica_feed" required="required" size="50"/><br>
+   <input type="text" name="starch_flow" placeholder="Starch_flow" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="Amina_Flow" placeholder="Amina_flow" required="required" size="50"/><br>
+   <input type="text" name="ore_Plup_pH" placeholder="Ore_Pulp_pH" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="ore_pulp_density" placeholder="Ore_pulp_density" required="required" size="50"/><br>
+   <input type="text" name="flotation_column_01_air_flow" placeholder="Flotation_column_01_air_flow" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="flotation_column_02_air_flow" placeholder="Flotation_column_02_air_flow" required="required" size="50"/><br>
+   <input type="text" name="flotation_column_03_air_flow" placeholder="Flotation_column_03_air_flow" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="flotation_column_06_air_flow" placeholder="Flotation_column_06_air_flow" required="required" size="50"/><br>
+   <input type="text" name="flotation_column_07_air_flow" placeholder="Flotation_column_07_air_flow" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="flotation_column_03_Level" placeholder="Flotation_column_03_level" required="required" size="50"/><br>
+   <input type="text" name="flotation_column_04_Level" placeholder="Flotation_column_04_level" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="flotation_column_05_Level" placeholder="Flotation_column_05_level" required="required" size="50"/><br>
+    <input type="text" name="flotation_column_06_Level" placeholder="Flotation_column_06_level" required="required" size="50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="flotation_column_07_Level" placeholder="Flotation_column_07_level" required="required" size="50"/><br>
+    <input type="text" name="iron_concrete" placeholder="% Iron_concrete" required="required" size="50"/><br><br>
+    <input type="submit" class="btn btn-primary btn-block btn-large" value="Predict">
+       </form>
+    <br>
+    <h1> {{prediction_text}} </h1>
+  </center>
+    </div>
+
+    </body>
+</html>
