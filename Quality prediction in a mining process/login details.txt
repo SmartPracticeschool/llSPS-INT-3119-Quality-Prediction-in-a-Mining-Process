@@ -1,5 +1,0 @@
-
-Login credentials for the project login form:
-
-username: Test
-password: sb@123
